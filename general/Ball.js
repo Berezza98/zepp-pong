@@ -46,8 +46,7 @@ export default class Ball {
 
   checkDeviceBorders() {
     if (this.position.sub(SCREEN_CENTER).mag() > DEVICE_WIDTH / 2 + this.width / 2) {
-      // END CURRENT GAME
-      // console.log('END GAME');
+      this.game.stop();
     }
   }
 
@@ -84,7 +83,6 @@ export default class Ball {
     const collidedWall = this.game.walls.checkCollision(angle);
 
     if (!collidedWall || this.color !== collidedWall.id) {
-      // END CURRENT GAME
       this.game.stop();
       return;
     }
@@ -92,7 +90,7 @@ export default class Ball {
     this.changeVelocityAfterCollision(collidedWall);
     this.setOrChangeColor();
     this.increaseSpeed();
-    this.game.increaseScore();
+    this.game.score.increase();
   }
 
   update() {

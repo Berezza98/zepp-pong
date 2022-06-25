@@ -1,6 +1,5 @@
 import Game from "../../../general/Game"
 
-const logger = DeviceRuntimeCore.HmLogger.getLogger('helloworld')
 Page({
   build() {
     hmUI.setLayerScrolling(false);
@@ -9,10 +8,10 @@ Page({
     game.render();
   },
   onInit() {
-    logger.debug('page onInit invoked')
+
   },
 
   onDestroy() {
-    logger.debug('page onDestroy invoked')
+
   },
 })

@@ -1,10 +1,23 @@
+import { LOCAL_STORAGE_KEY } from "./consts"
+import LocalStorage from "./utils/LocalStorage"
+
 App({
-  globalData: {},
+  globalData: {
+    localStorage: null,
+    maxScore: 0
+  },
   onCreate(options) {
-    console.log('app on create invoke')
+    this.globalData.localStorage = new LocalStorage(LOCAL_STORAGE_KEY);
+    // RESET maxScore TO 1
+    // this.globalData.localStorage.set({
+    //   maxScore: 0
+    // });
+
+    const data = this.globalData.localStorage.get();
+    this.globalData.maxScore = data.maxScore || 0;
   },
 
   onDestroy(options) {
-    console.log('app on destroy invoke')
+
   }
 })

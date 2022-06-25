@@ -70,3 +70,14 @@ export function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+export function hslToHex(h, s, l) {
+  const newL = l / 100;
+  const a = s * Math.min(newL, 1 - newL) / 100;
+  const f = n => {
+    const k = (n + h / 30) % 12;
+    const color = newL - a * Math.max(Math.min(k - 3, 9 - k, 1), -1);
+    return Math.round(255 * color).toString(16).padStart(2, '0');
+  };
+  return `0x${f(0)}${f(8)}${f(4)}`;
+}
