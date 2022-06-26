@@ -33,7 +33,7 @@ export default class Ball {
   }
 
   increaseSpeed() {
-    this.maxSpeed += 0.5;
+    this.maxSpeed += 1;
   }
 
   setOrChangeColor() {
@@ -89,8 +89,11 @@ export default class Ball {
 
     this.changeVelocityAfterCollision(collidedWall);
     this.setOrChangeColor();
-    this.increaseSpeed();
     this.game.score.increase();
+
+    if (this.game.score.counter % 5 === 0) {
+      this.increaseSpeed();
+    }
   }
 
   update() {
