@@ -11,12 +11,12 @@ export default class Game {
   }
 
   init() {
-    this.background = new Background('image/background.png');
+    // this.background = new Background('image/background.png');
     this.score = new Score();
     this.ball = new Ball(this);
     this.walls = new Walls(this);
     this.gameObjects = [
-      this.background,
+      // this.background,
       this.score,
       this.ball,
       this.walls
@@ -33,7 +33,7 @@ export default class Game {
     if (!this.timer) return;
 
     timer.stopTimer(this.timer);
-    this.background.remove();
+    // this.background.remove();
 
     const myScore = this.score.counter;
 

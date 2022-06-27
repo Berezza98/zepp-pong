@@ -2,7 +2,7 @@
   "configVersion": "v2",
   "app": {
     "appId": 25202,
-    "appName": "hello world",
+    "appName": "Zepp Pong",
     "appType": "app",
     "version": {
       "code": 1,
@@ -10,7 +10,7 @@
     },
     "icon": "icon.png",
     "vender": "zepp",
-    "description": "hello world app"
+    "description": "Zepp Pong Game"
   },
   "permissions": [],
   "runtime": {
@@ -33,7 +33,7 @@
           "window": {
             "navigationBarBackgroundColor": "#ffffff",
             "navigationBarTextStyle": "black",
-            "navigationBarTitleText": "Hello World",
+            "navigationBarTitleText": "Zepp Pong",
             "backgroundColor": "#eeeeee",
             "backgroundTextStyle": "light"
           }
@@ -56,118 +56,11 @@
         }
       ],
       "designWidth": 480
-    },
-    "gtr3": {
-      "module": {
-        "page": {
-          "pages": [
-            "page/gtr3/home/index.page"
-          ],
-          "window": {
-            "navigationBarBackgroundColor": "#ffffff",
-            "navigationBarTextStyle": "black",
-            "navigationBarTitleText": "Hello World",
-            "backgroundColor": "#eeeeee",
-            "backgroundTextStyle": "light"
-          }
-        },
-        "app-side": {
-          "path": "app-side/index"
-        },
-        "setting": {
-          "path": "setting/index"
-        }
-      },
-      "platforms": [
-        {
-          "name": "gtr3",
-          "deviceSource": 226
-        },
-        {
-          "name": "gtr3-w",
-          "deviceSource": 227
-        },
-        {
-          "name": "t-rex2",
-          "deviceSource": 418
-        },
-        {
-          "name": "t-rex2-w",
-          "deviceSource": 419
-        }
-      ],
-      "designWidth": 454
-    },
-    "gts3": {
-      "module": {
-        "page": {
-          "pages": [
-            "page/gts3/home/index.page"
-          ],
-          "window": {
-            "navigationBarBackgroundColor": "#ffffff",
-            "navigationBarTextStyle": "black",
-            "navigationBarTitleText": "Hello World",
-            "backgroundColor": "#eeeeee",
-            "backgroundTextStyle": "light"
-          }
-        },
-        "app-side": {
-          "path": "app-side/index"
-        },
-        "setting": {
-          "path": "setting/index"
-        }
-      },
-      "platforms": [
-        {
-          "name": "gts3",
-          "deviceSource": 224
-        },
-        {
-          "name": "gts3-w",
-          "deviceSource": 225
-        }
-      ],
-      "designWidth": 390
-    },
-    "teide": {
-      "module": {
-        "page": {
-          "pages": [
-            "page/t-rex2/home/index.page"
-          ],
-          "window": {
-            "navigationBarBackgroundColor": "#ffffff",
-            "navigationBarTextStyle": "black",
-            "navigationBarTitleText": "Hello World",
-            "backgroundColor": "#eeeeee",
-            "backgroundTextStyle": "light"
-          }
-        },
-        "app-side": {
-          "path": "app-side/index"
-        },
-        "setting": {
-          "path": "setting/index"
-        }
-      },
-      "platforms": [
-        {
-          "name": "t-rex2",
-          "deviceSource": 418
-        },
-        {
-          "name": "t-rex2-w",
-          "deviceSource": 419
-        }
-      ],
-      "designWidth": 454
     }
   },
   "i18n": {
     "en-US": {
-      "appName": "Hello World"
+      "appName": "Zepp Pong"
     }
   },
   "defaultLanguage": "en-US"

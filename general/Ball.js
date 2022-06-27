@@ -13,8 +13,8 @@ const BALL_IMAGE_MAP = {
 export default class Ball {
   constructor(game) {
     this.game = game;
-    this.width = 20;
-    this.height = 20;
+    this.width = 28;
+    this.height = 28;
     this.maxSpeed = 3;
 
     this.acceleration = new Vector(0, 0);
@@ -34,6 +34,8 @@ export default class Ball {
 
   increaseSpeed() {
     this.maxSpeed += 1;
+
+    this.velocity = this.velocity.setMag(this.maxSpeed);
   }
 
   setOrChangeColor() {

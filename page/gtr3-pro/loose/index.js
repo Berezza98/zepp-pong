@@ -1,4 +1,5 @@
 import { DEVICE_HEIGHT, DEVICE_WIDTH } from "../../../consts";
+import Background from "../../../general/Background";
 import ImageText from "../../../general/ImageText";
 
 let paramsObj = {};
@@ -7,29 +8,29 @@ Page({
   build() {
     hmUI.setLayerScrolling(false);
 
-    const button = hmUI.createWidget(hmUI.widget.BUTTON, {
-      x: DEVICE_WIDTH / 2 - 200 / 2,
-      y: DEVICE_HEIGHT / 2 + 40,
-      w: 200,
-      h: 60,
-      press_color: 0x1976d2,
-      normal_color: 0xef5350,
-      text: 'Play Again',
-      radius: 5,
-      text_size: 30,
-      click_func: () => {
-        hmApp.gotoPage({ url: 'page/gtr3-pro/game/index' });
-      }
+    const bg = new Background('image/lose-bg.png');
+
+    bg.onClick(() => {
+      hmApp.gotoPage({ url: 'page/gtr3-pro/game/index' });
     });
     
     const lastScoreWidget = new ImageText('score-numbers', {
       x: DEVICE_WIDTH / 2,
-      y: DEVICE_HEIGHT / 2 - 8,
+      y: DEVICE_HEIGHT / 2 - 85,
       w: 100,
-      h: 50
+      h: 51
     });
 
     lastScoreWidget.text = paramsObj.currentScore.toString();
+
+    const bestScoreWidget = new ImageText('score-numbers-small', {
+      x: DEVICE_WIDTH / 2 + 60,
+      y: DEVICE_HEIGHT / 2 - 13,
+      w: 100,
+      h: 30
+    });
+
+    bestScoreWidget.text = getApp()._options.globalData.maxScore.toString();
   },
   onInit(params) {
     paramsObj = JSON.parse(params);

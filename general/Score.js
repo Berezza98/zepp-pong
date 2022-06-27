@@ -29,7 +29,7 @@ export default class Score {
         x: DEVICE_WIDTH / 2,
         y: DEVICE_HEIGHT / 2 - 8,
         w: 100,
-        h: 50
+        h: 60
       });
 
       return;
@@ -43,7 +43,7 @@ export default class Score {
       x: DEVICE_WIDTH / 2,
       y: DEVICE_HEIGHT / 2 - 8,
       w: 100,
-      h: 50
+      h: 60
     });
 
     this.widget.text = this.counter;

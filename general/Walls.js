@@ -1,6 +1,13 @@
 import { COLORS, DEVICE_HEIGHT, DEVICE_WIDTH, SCREEN_CENTER } from "../consts";
 import { radiansToDegrees, normalizeAngle } from "../utils/helpers";
 
+const WALL_COLORS_MAP = {
+  [COLORS.BLUE]: 0x2E5DB5,
+  [COLORS.YELLOW]: 0xFFBA29,
+  [COLORS.RED]: 0xFF5326,
+  [COLORS.GREEN]: 0x009C4E
+};
+
 export default class Walls {
   constructor(game) {
     this.game = game;
@@ -12,25 +19,25 @@ export default class Walls {
       {
         start: 0 + this.gap,
         end: Math.PI / 2 - this.gap,
-        color: 0x00ff00,
+        color: WALL_COLORS_MAP[COLORS.GREEN],
         id: COLORS.GREEN
       },
       {
         start: Math.PI / 2 + this.gap,
         end: Math.PI - this.gap,
-        color: 0xffff00,
+        color: WALL_COLORS_MAP[COLORS.YELLOW],
         id: COLORS.YELLOW
       },
       {
         start: Math.PI + this.gap,
         end: Math.PI + Math.PI / 2 - this.gap,
-        color: 0xff0000,
+        color: WALL_COLORS_MAP[COLORS.RED],
         id: COLORS.RED
       },
       {
         start: Math.PI + Math.PI / 2 + this.gap,
         end: 2 * Math.PI - this.gap,
-        color: 0x0000ff,
+        color: WALL_COLORS_MAP[COLORS.BLUE],
         id: COLORS.BLUE
       },
     ];
