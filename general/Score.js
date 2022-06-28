@@ -43,7 +43,7 @@ export default class Score {
       x: DEVICE_WIDTH / 2,
       y: DEVICE_HEIGHT / 2 - 8,
       w: 100,
-      h: 60
+      h: 56
     });
 
     this.widget.text = this.counter;

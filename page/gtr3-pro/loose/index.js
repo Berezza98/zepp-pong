@@ -18,23 +18,22 @@ Page({
       x: DEVICE_WIDTH / 2,
       y: DEVICE_HEIGHT / 2 - 85,
       w: 100,
-      h: 51
+      h: 56
     });
 
     lastScoreWidget.text = paramsObj.currentScore.toString();
 
     const bestScoreWidget = new ImageText('score-numbers-small', {
       x: DEVICE_WIDTH / 2 + 60,
-      y: DEVICE_HEIGHT / 2 - 13,
+      y: DEVICE_HEIGHT / 2 - 16,
       w: 100,
-      h: 30
+      h: 34
     });
 
     bestScoreWidget.text = getApp()._options.globalData.maxScore.toString();
   },
   onInit(params) {
     paramsObj = JSON.parse(params);
-    console.log('INIT: ', paramsObj.currentScore);
   },
 
   onDestroy() {
