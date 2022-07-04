@@ -1,18 +1,24 @@
 {
-  "configVersion": "v2",
+  "i18n": {
+    "en-US": {
+      "appName": "Zepp Pong",
+      "name": "HelloWorld"
+    }
+  },
+  "defaultLanguage": "en-US",
   "app": {
-    "appId": 25202,
-    "appName": "Zepp Pong",
+    "appIdType": 0,
     "appType": "app",
     "version": {
       "code": 1,
       "name": "1.0.1"
     },
+    "appId": 29217,
+    "appName": "Zepp Pong",
     "icon": "icon.png",
     "vender": "zepp",
     "description": "Zepp Pong Game"
   },
-  "permissions": [],
   "runtime": {
     "apiVersion": {
       "compatible": "1.0.0",
@@ -20,15 +26,14 @@
       "minVersion": "1.0.0"
     }
   },
-  "debug": false,
   "targets": {
-    "gtr3-pro": {
+    "gts-3": {
       "module": {
         "page": {
           "pages": [
-            "page/gtr3-pro/home/index",
-            "page/gtr3-pro/game/index",
-            "page/gtr3-pro/loose/index"
+            "page/gts-3/home/index",
+            "page/gts-3/game/index",
+            "page/gts-3/loose/index"
           ],
           "window": {
             "navigationBarBackgroundColor": "#ffffff",
@@ -45,7 +50,43 @@
           "path": "setting/index"
         }
       },
+       "designWidth": 390,
       "platforms": [
+        {
+          "name": "gts-3",
+          "deviceSource": 224
+        },
+        {
+          "name": "gts-3w",
+          "deviceSource": 225
+        }
+      ]
+    },
+    "gtr3-pro": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/gts-3/home/index",
+            "page/gts-3/game/index",
+            "page/gts-3/loose/index"
+          ],
+          "window": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "Zepp Pong",
+            "backgroundColor": "#eeeeee",
+            "backgroundTextStyle": "light"
+          }
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      },   
+      "designWidth": 480,
+       "platforms": [
         {
           "name": "gtr3-pro",
           "deviceSource": 229
@@ -54,14 +95,12 @@
           "name": "gtr3-pro-w",
           "deviceSource": 230
         }
-      ],
-      "designWidth": 480
+      ]
+    
+     
     }
   },
-  "i18n": {
-    "en-US": {
-      "appName": "Zepp Pong"
-    }
-  },
-  "defaultLanguage": "en-US"
+  "configVersion": "v2",
+  "permissions": [],
+  "debug": false
 }
