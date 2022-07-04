@@ -7,7 +7,7 @@ Page({
     const bg = new Background('image/home-bg.png');
 
     bg.onClick(() => {
-      hmApp.gotoPage({ url: 'page/gtr3-pro/game/index' });
+      hmApp.gotoPage({ url: 'page/gts-3/game/index' });
     });
   },
   onInit() {
