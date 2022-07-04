@@ -91,9 +91,9 @@ export default class Walls {
       const arc = hmUI.createWidget(hmUI.widget.ARC);
       arc.setProperty(hmUI.prop.MORE, {
         x: 0,
-        y: 0,
+        y: (DEVICE_HEIGHT - DEVICE_WIDTH) / 2,
         w: DEVICE_WIDTH,
-        h: DEVICE_HEIGHT,
+        h: DEVICE_WIDTH,
         start_angle: radiansToDegrees(start),
         end_angle: radiansToDegrees(end),
         color,
