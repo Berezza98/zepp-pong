@@ -56,6 +56,77 @@
         }
       ],
       "designWidth": 480
+    },
+    "common": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/gtr3-pro/home/index",
+            "page/gtr3-pro/game/index",
+            "page/gtr3-pro/loose/index"
+          ]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      },
+      "platforms": [
+        {
+          "name": "gtr4",
+          "deviceSource": 7930112
+        },
+        {
+          "name": "gtr4-w",
+          "deviceSource": 7930113
+        },
+        {
+          "name": "gts4",
+          "deviceSource": 7995648
+        },
+        {
+          "name": "gts4-w",
+          "deviceSource": 7995649
+        }
+      ],
+      "designWidth": 480
+    },
+    "gtr3": {
+      "module": {
+        "page": {
+          "pages": [
+            "page/gtr3-pro/home/index",
+            "page/gtr3-pro/game/index",
+            "page/gtr3-pro/loose/index"
+          ],
+          "window": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "Zepp Pong",
+            "backgroundColor": "#eeeeee",
+            "backgroundTextStyle": "light"
+          }
+        },
+        "app-side": {
+          "path": "app-side/index"
+        },
+        "setting": {
+          "path": "setting/index"
+        }
+      },
+      "platforms": [
+        {
+          "name": "gtr3",
+          "deviceSource": 226
+        },
+        {
+          "name": "gtr3-w",
+          "deviceSource": 227
+        }
+      ],
+      "designWidth": 454
     }
   },
   "i18n": {
